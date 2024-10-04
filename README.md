@@ -87,6 +87,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ![WhatsApp Image 2024-10-05 at 01 05 41_d44c80bd](https://github.com/user-attachments/assets/abd39302-f3af-4614-9d39-e7c6cca7ddde)
 
+#### Intel® Distribution for Modin
 
 ![WhatsApp Image 2024-10-05 at 01 26 51_9199422f](https://github.com/user-attachments/assets/21627209-5066-4936-a324-1a6e22c63a53)
 

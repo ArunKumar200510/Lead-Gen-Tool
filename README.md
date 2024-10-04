@@ -85,6 +85,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ![image](https://github.com/user-attachments/assets/df0bb37a-aa31-47bd-b56b-754915d2e87d)
 
+![WhatsApp Image 2024-10-05 at 01 05 41_d44c80bd](https://github.com/user-attachments/assets/abd39302-f3af-4614-9d39-e7c6cca7ddde)
 
 
 Our application utilizes the following technologies:

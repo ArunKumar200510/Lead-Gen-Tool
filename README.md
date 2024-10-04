@@ -69,9 +69,37 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ### Intel® Toolkits:
 ![image](Images/Intel_Tools.png)
+
+**Model Optimization**:
+- **Intel® Extension for PyTorch**: This tool optimizes deep learning models built in PyTorch, enabling faster training and inference on Intel® hardware such as GPUs and TPUs.
+- **Intel® IPEX** (Intel® Extension for PyTorch): Specifically designed to optimize performance further for Intel architectures, enhancing both training and inference speed.
+
+**Model Inference**:
+- **Intel® OpenVINO™ Toolkit**: This toolkit is focused on optimizing inference, converting trained models into a format that is highly efficient for deployment across various Intel hardware, ensuring low-latency predictions.
+
+**Data Analytics**:
+- **Intel® Distribution for Modin**: Used to accelerate data analysis and Exploratory Data Analysis (EDA) tasks, especially for handling large datasets, by providing better performance than traditional Pandas on Intel CPUs.
+
+**Microsoft/phi-2**: Shown as a large-scale model that benefits from these Intel optimizations, driving efficient and faster AI model training and deployment.
+
+---
+
 ### Benchmark Results with Intel® oneAPI Toolkits
 
 ![image](https://github.com/user-attachments/assets/df0bb37a-aa31-47bd-b56b-754915d2e87d)
+
+1. **Model Optimization**:
+   - The **Intel Neural Compressor**: This component is used to quantize the phi-2 model, which means converting a model to a more efficient format that uses less memory and increases inference speed without sacrificing accuracy. It supports both static quantization and static smooth quantization for more advanced performance improvements.
+   
+2. **Inference**:
+   - The optimized model is passed to the **IPEX backend** for inference. The Intel® Extension for PyTorch (IPEX) backend further improves inference time by integrating the quantized model into Intel architectures.
+   - **FP32 format**: This format represents the 32-bit floating point precision, indicating the model is optimized for high-precision, accurate inference.
+
+3. **Intel OpenVINO™ Toolkit**: Further optimizes the inference of the model after compression. The OpenVINO™ toolkit supports deep learning inference across Intel CPUs, GPUs, and other accelerators to speed up model predictions.
+
+4. **Intel Distribution for Modin**: Finally, the large datasets involved in this machine learning pipeline are managed using Intel's Modin distribution, which accelerates data processing, retrieval, and insertion tasks. It shows the efficient handling of large datasets that are crucial for AI model training and inference, enabling faster analysis with Pandas-compatible APIs.
+
+---
 
 ![Open_VINO_Comparions](Images/open_vino_Performance.png)
 
@@ -80,6 +108,10 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 ![diagram-moding-pandas-api](https://github.com/user-attachments/assets/c96cb1ed-3bdb-459e-8d8f-50406bd02262)
 
 ![WhatsApp Image 2024-10-05 at 01 37 20_db5e1ffd](https://github.com/user-attachments/assets/05074c02-8289-425e-a460-80429d34657d)
+
+**Intel® Modin vs. Pandas**: Visualizing a significant performance boost in data analysis using Intel® Modin, the image could display a bar graph comparing time taken to process large datasets using Modin versus Pandas.
+
+**Inference & Training Performance**: Another comparison could illustrate the performance improvement achieved with Intel® Extension for PyTorch, focusing on faster training and inference times when using Intel® hardware optimizations.
 
 
 Our application utilizes the following technologies:
@@ -94,7 +126,7 @@ Our application utilizes the following technologies:
   - Python
 
 - *AI & Machine Learning*:
-  - OpenAI
+  - phi-2 model
   - Langchain
   - LLMs
 

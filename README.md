@@ -60,20 +60,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 ![image](https://github.com/user-attachments/assets/611071cd-2f14-43fe-a7cc-3b8052c2c800)
 
 
-
-### Lead Gen Tool in Action 🖼
-
-1. A search home page to search for the industry based on specific category:
-
-2. A list of company names displayed based on the selected category:
-
-3. Industry details from extracted data.
-
-5. CSV downloader for downloading industry details:
-
-
----
-
+----
 
 
 ### Tech Stack :

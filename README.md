@@ -80,12 +80,13 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ![image](https://github.com/user-attachments/assets/567a8d3c-20a4-46d6-b735-abe9720faee4)
 
-
+### Intel® Toolkits:
+![image](Images/Intel_Tools.png)
 ### Benchmark Results with Intel® oneAPI Toolkits
 
 ![image](https://github.com/user-attachments/assets/df0bb37a-aa31-47bd-b56b-754915d2e87d)
 
-![WhatsApp Image 2024-10-05 at 01 05 41_d44c80bd](https://github.com/user-attachments/assets/abd39302-f3af-4614-9d39-e7c6cca7ddde)
+![Open_VINO_Comparions](Images/open_vino_Performance.png)
 
 #### Intel® Distribution for Modin vs Pandas
 

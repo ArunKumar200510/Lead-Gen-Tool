@@ -57,7 +57,8 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ### Detailed Lead Gen Tool Process Flow:
 
-![image](https://github.com/user-attachments/assets/13e4159f-8c67-46b9-8753-5896f1cb11ef)
+![image](https://github.com/user-attachments/assets/611071cd-2f14-43fe-a7cc-3b8052c2c800)
+
 
 
 ### Lead Gen Tool in Action 🖼

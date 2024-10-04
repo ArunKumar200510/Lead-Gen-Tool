@@ -89,7 +89,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 #### Intel® Distribution for Modin vs Pandas
 
-![WhatsApp Image 2024-10-05 at 01 26 51_9199422f](https://github.com/user-attachments/assets/21627209-5066-4936-a324-1a6e22c63a53)
+![WhatsApp Image 2024-10-05 at 01 37 20_db5e1ffd](https://github.com/user-attachments/assets/05074c02-8289-425e-a460-80429d34657d)
 
 
 Our application utilizes the following technologies:

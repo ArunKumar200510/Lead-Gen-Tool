@@ -69,6 +69,11 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ---
 
+### Benchmark Results with Intel® oneAPI Toolkits
+
+![image](https://github.com/user-attachments/assets/df0bb37a-aa31-47bd-b56b-754915d2e87d)
+
+
 
 ### Tech Stack :
 

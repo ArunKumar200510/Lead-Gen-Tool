@@ -1,6 +1,6 @@
 # *Lead Gen Tool: The Future of Smart Customer Targeting & Marketing* 🎯💼
 
-*Lead Gen Tool* is an advanced platform designed to redefine the way businesses approach customer segmentation, professional contact retrieval, and campaign management. Through powerful data-driven methods, it enables businesses to engage with the right audience, boosting marketing efficiency and conversion success.
+*Lead Gen Tool* is an advanced platform designed to redefine how businesses approach customer segmentation, professional contact retrieval, and campaign management. Powerful data-driven methods enable companies to engage with the right audience, boosting marketing efficiency and conversion success.
 
 ## *Why Lead Gen Tool?* 🤔
 ![image](Images/Comp.png)

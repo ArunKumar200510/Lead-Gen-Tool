@@ -117,7 +117,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 Our application utilizes the following technologies:
 
 - *Frontend*:
-  - HTML
+  - HTML![image](https://github.com/user-attachments/assets/2c1ab92d-b890-4c83-9008-be594c9a6353)
   - CSS
   - JavaScript
 

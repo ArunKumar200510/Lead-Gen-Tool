@@ -18,6 +18,16 @@ In the age of data overload, companies struggle to cut through the noise and fin
 
 ---
 
+# 💻✨ UI Design Preview
+
+Check out our latest UI/UX design created using Uizard! 🎨🖼️
+
+[🚀 **View the UI Design Here**](https://app.uizard.io/p/548942ed)
+
+We aim to provide an intuitive and beautiful user experience with our new design. Your feedback is welcome! 😃💬
+
+---
+
 ## *Lead Gen Tool's Solution* ✅
 
 ### *DEMO* 

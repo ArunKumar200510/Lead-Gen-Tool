@@ -1,3 +1,11 @@
+# 🌟 Drastic Innovators 🌟
+
+### 🆔 Team ID: A0084
+
+### 🏫 College: Sri Eshwar College of Engineering
+
+Welcome to the Drastic Innovators project! 🚀 We are a team of enthusiastic individuals dedicated to pushing the boundaries of innovation and technology. Our goal is to create impactful solutions that enhance user experiences and drive progress in various fields. 
+
 # *Lead Gen Tool: The Future of Smart Customer Targeting & Marketing* 🎯💼
 
 *Lead Gen Tool* is an advanced platform designed to redefine how businesses approach customer segmentation, professional contact retrieval, and campaign management. Powerful data-driven methods enable companies to engage with the right audience, boosting marketing efficiency and conversion success.

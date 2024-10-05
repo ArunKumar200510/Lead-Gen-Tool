@@ -234,7 +234,7 @@ Our application utilizes the following technologies:
 
 ----
 
-# <- Lead Gen Tool in Action -> 
+# <- Lead Gen Tool -> 
 
 
 ![image1](https://github.com/user-attachments/assets/f6cf4cfd-078e-4afe-9864-2924b1d3de34)

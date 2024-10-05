@@ -246,6 +246,17 @@ Our application utilizes the following technologies:
 
 ![image](https://github.com/user-attachments/assets/eb6d3c26-8555-46b3-94f4-25cb297b564a)
 
+----
+
+# Resource 
+
+You can view the presentation by clicking the link below:
+
+[View the Canva Presentation](https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHDJ2psA/edit?utm_content=DAGSmf3iKbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+
+----
+
 # What we learned ![image](https://user-images.githubusercontent.com/72274851/218499685-e8d445fc-e35e-4ab5-abc1-c32462592603.png)
 
 ![image](https://github.com/user-attachments/assets/ecd13baa-a872-438b-a355-a13f3d08fefc)
@@ -257,11 +268,8 @@ Our application utilizes the following technologies:
 
 ✅ **Fostered Collaboration**: The development of such an application likely involved collaboration with a team comprising experts from diverse fields, including deep learning and data analysis. This experience likely emphasized the significance of collaborative efforts in attaining shared objectives.
 
-# Resource 
 
-You can view the presentation by clicking the link below:
 
-[View the Canva Presentation](https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHDJ2psA/edit?utm_content=DAGSmf3iKbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## *Unlock the Power of Smart Marketing Today* 🔑
 

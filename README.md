@@ -65,51 +65,6 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ----
 
-### Intel ToolKits usage tutorial
-
-```bash
-conda install libuv
-python -m pip install torch==2.3.1+cxx11.abi torchvision==0.18.1+cxx11.abi torchaudio==2.3.1+cxx11.abi intel-extension-for-pytorch==2.3.110+xpu --extra-index-url https://pytorch-extension.intel.com/release-whl/stable/mtl/us/
-```
-
-```python
-#import the required libraries
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import intel_extension_for_pytorch as ipex
-
-model_name = "microsoft/phi-2"
-model = AutoModelForCausalLM.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = ipex.optimize(model)
-```
-
-```bash
-pip install modin[dask]
-```
-
-```python
-import modin.pandas as pd
-os.environ["MODIN_ENGINE"] = "dask"
-
-df = pd.read_csv(file_path)
-```
-
-```bash
-pip install optimum[openvino,nncf]
-pip install neural-compressor[pt]
-```
-
-```python
-from optimum.intel import OVModelForCausalLM
-
-model_id = "microsoft/phi-2"
-model = OVModelForCausalLM.from_pretrained(model_id, export=True)
-model.save_pretrained("ov_model")
-```
-
----
-
 
 ### Tech Stack :
 
@@ -133,6 +88,55 @@ model.save_pretrained("ov_model")
 - **Intel® Distribution for Modin**: Used to accelerate data analysis and Exploratory Data Analysis (EDA) tasks, especially for handling large datasets, by providing better performance than traditional Pandas on Intel CPUs.
 
 **Microsoft/phi-2**: Shown as a large-scale model that benefits from these Intel optimizations, driving efficient and faster AI model training and deployment.
+
+
+### Intel ToolKits Usage Tutorial
+
+**Install PyTorch with Intel Optimization**
+```bash
+conda install libuv
+python -m pip install torch==2.3.1+cxx11.abi torchvision==0.18.1+cxx11.abi torchaudio==2.3.1+cxx11.abi intel-extension-for-pytorch==2.3.110+xpu --extra-index-url https://pytorch-extension.intel.com/release-whl/stable/mtl/us/
+```
+
+**Load and Optimize a Pre-Trained Model**
+```python
+#import the required libraries
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import intel_extension_for_pytorch as ipex
+
+model_name = "microsoft/phi-2"
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = ipex.optimize(model)
+```
+
+**Install Modin for Data Processing**
+```bash
+pip install modin[dask]
+```
+
+```python
+import modin.pandas as pd
+os.environ["MODIN_ENGINE"] = "dask"
+
+df = pd.read_csv(file_path)
+```
+
+**Install Intel’s Optimum and Neural Compressor**
+```bash
+pip install optimum[openvino,nncf]
+pip install neural-compressor[pt]
+```
+
+**Load and Optimize your Model**
+```python
+from optimum.intel import OVModelForCausalLM
+
+model_id = "microsoft/phi-2"
+model = OVModelForCausalLM.from_pretrained(model_id, export=True)
+model.save_pretrained("ov_model")
+```
 
 ---
 

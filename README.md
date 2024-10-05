@@ -78,17 +78,16 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 ![image](https://github.com/user-attachments/assets/1909c3a6-0e02-4f9b-9e5a-fb72cb4120da)
 
 **Model Optimization**:
-- **Intel® Extension for PyTorch**: This tool optimizes deep learning models built in PyTorch, enabling faster training and inference on Intel® hardware such as GPUs and TPUs.
-- **Intel® IPEX** (Intel® Extension for PyTorch): Specifically designed to optimize performance further for Intel architectures, enhancing both training and inference speed.
+- [Intel® Extension for Pytorch](https://github.com/intel/intel-extension-for-pytorch): This tool optimizes deep learning models built in PyTorch, enabling faster training and inference on Intel® hardware such as GPUs and TPUs.
+- [Intel® Ipex](https://github.com/intel/intel-extension-for-pytorch): (Intel® Extension for PyTorch): Specifically designed to optimize performance further for Intel architectures, enhancing both training and inference speed.
 
 **Model Inference**:
-- **Intel® OpenVINO™ Toolkit**: This toolkit is focused on optimizing inference, converting trained models into a format that is highly efficient for deployment across various Intel hardware, ensuring low-latency predictions.
+- [Intel® OpenVINO™ Toolkit](https://github.com/openvinotoolkit/openvino): This toolkit is focused on optimizing inference, converting trained models into a format that is highly efficient for deployment across various Intel hardware, ensuring low-latency predictions.
 
 **Data Analytics**:
-- **Intel® Distribution for Modin**: Used to accelerate data analysis and Exploratory Data Analysis (EDA) tasks, especially for handling large datasets, by providing better performance than traditional Pandas on Intel CPUs.
+- [Intel® Distribution for Modin](https://github.com/modin-project/modin): Used to accelerate data analysis and Exploratory Data Analysis (EDA) tasks, especially for handling large datasets, by providing better performance than traditional Pandas on Intel CPUs.
 
 **Microsoft/phi-2**: Shown as a large-scale model that benefits from these Intel optimizations, driving efficient and faster AI model training and deployment.
-
 
 ### Intel ToolKits Usage Tutorial
 

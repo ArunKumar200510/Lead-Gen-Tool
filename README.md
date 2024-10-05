@@ -304,7 +304,7 @@ Meet the talented team behind **Lead Gen Tool**:
 - **Karthikeyan M**: [LinkedIn](https://www.linkedin.com/in/karthikeyan-m30112004/) | [GitHub](https://github.com/KarthikeyanM3011)
 - **Barath Raj P**: [LinkedIn](https://www.linkedin.com/in/barathrajp/) | [GitHub](https://github.com/Barathaj)
 - **Arun Kumar R**: [LinkedIn](https://www.linkedin.com/in/arun-kumar-99b841255/) | [GitHub](https://github.com/ArunKumar200510)
-- **LogaBaalan RS**:[LinkedIn](https://www.linkedin.com/in/logabaalan-r-s-94ba82259/) | [GitHub](https://github.com/logabaalan777)
+- **Logabaalan R S**:[LinkedIn](https://www.linkedin.com/in/logabaalan-r-s-94ba82259/) | [GitHub](https://github.com/logabaalan777)
 
 Contact us for collaborations, queries, or more information!
 

@@ -268,7 +268,18 @@ You can view the presentation by clicking the link below:
 ✅ **Fostered Collaboration**: The development of such an application likely involved collaboration with a team comprising experts from diverse fields, including deep learning and data analysis. This experience likely emphasized the significance of collaborative efforts in attaining shared objectives.
 
 
+<a name="About-Us"></a>
+## About Us 👨‍💻🌐
+Meet the talented team behind **Lead Gen Tool**:
 
+- **Karthikeyan M**: [LinkedIn](https://www.linkedin.com/in/karthikeyan-m30112004/) | [GitHub](https://github.com/KarthikeyanM3011)
+- **Barath Raj P**: [LinkedIn](https://www.linkedin.com/in/barathrajp/) | [GitHub](https://github.com/Barathaj)
+- **Arun Kumar R**: [LinkedIn](https://www.linkedin.com/in/arun-kumar-99b841255/) | [GitHub](https://github.com/ArunKumar200510)
+- **LogaBaalan RS**:[LinkedIn](https://www.linkedin.com/in/logabaalan-r-s-94ba82259/) | [GitHub](https://github.com/logabaalan777)
+
+Contact us for collaborations, queries, or more information!
+
+---
 
 ## *Unlock the Power of Smart Marketing Today* 🔑
 

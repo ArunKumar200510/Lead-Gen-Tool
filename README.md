@@ -183,7 +183,7 @@ model.save_pretrained("ov_model")
 
 ![image](https://github.com/user-attachments/assets/9426cdf3-b3b9-4368-bcc5-8f9076c99348)
 
-**Intel® Modin vs. Pandas**: Visualizing a significant performance boost in data analysis using Intel® Modin, the image could display a bar graph comparing time taken to process large datasets using Modin versus Pandas.
+**Intel® Modin vs. Pandas**: Visualizing a significant performance boost in data analysis using Intel® Modin, the image could display the comparing time taken to process large datasets using Modin versus Pandas.
 
 **Inference & Training Performance**: Another comparison could illustrate the performance improvement achieved with Intel® Extension for PyTorch, focusing on faster training and inference times when using Intel® hardware optimizations.
 

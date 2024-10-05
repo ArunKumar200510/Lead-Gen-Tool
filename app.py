@@ -467,3 +467,561 @@ def get_persona(input_data):
     
     print(names, positions, linkedin_urls)
     return names, positions, linkedin_urls
+
+def extract_details(url):
+
+    driver = webdriver.Chrome()
+    # Login 
+    driver.get('https://www.linkedin.com/login')
+    time.sleep(2) 
+    username_field = driver.find_element(By.ID, 'username')
+    username_field.send_keys('barathraj.p2022ai-ds@sece.ac.in')
+    password_field = driver.find_element(By.ID, 'password')
+    password_field.send_keys('sece.ac.in')
+    password_field.send_keys(Keys.RETURN)
+    time.sleep(30) 
+    
+    # About page:
+    home_page_url = str(url) + '/about'
+    driver.get(home_page_url)
+    
+    # Title
+    try:
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'org-top-card-summary__title')))
+        company_name = driver.find_element(By.CLASS_NAME, 'org-top-card-summary__title').text
+    except:
+        company_name = ""
+    
+    # Overview
+    try:
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'p')))
+        about = driver.find_elements(By.TAG_NAME, 'p')[1].text  
+    except:
+        about = ""
+    
+    # Details
+    detail = []
+    try:
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'dd')))
+        details = driver.find_elements(By.TAG_NAME, 'dd')
+        for det in details:
+            detail.append(det.text)
+        clean_details = categorize_information(detail)
+    except:
+        clean_details = {
+            'website': "",
+            'industry': "",
+            'employee_size': "",
+            'location': "",
+            'founded': "",
+            'additional_info': ""
+        }
+
+    people_url = str(url) + '/people'
+    driver.get(people_url)
+    
+    try:
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'org-people-profile-card__profile-title')))
+    except:
+        pass
+
+    SCROLL_PAUSE_TIME = 4
+    last_height = driver.execute_script("return document.body.scrollHeight")
+
+    while True:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(SCROLL_PAUSE_TIME)
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+
+    i = 0
+    linked_url = []
+    while True:
+        lnks = driver.find_elements(By.ID, f"org-people-profile-card__profile-image-{i}")
+        if not lnks:
+            break
+        for lnk in lnks:
+            linked_url.append(lnk.get_attribute('href'))
+        i += 1
+
+    titles = []
+    try:
+        title_elements = driver.find_elements(By.CLASS_NAME, 'lt-line-clamp--single-line')
+        for tit in title_elements:
+            titles.append(tit.text)
+    except:
+        titles = []
+    
+    headline = []
+    try:
+        head_elements = driver.find_elements(By.CLASS_NAME, 'lt-line-clamp--multi-line')
+        for i, hea in enumerate(head_elements):
+            if i % 2 == 0:
+                headline.append(hea.text)
+        clean_headline = clean_list(headline)
+    except: 
+        clean_headline = []
+    
+
+    url_link=clean_list(linked_url)
+
+    persona = [{'name': n, 'position': h, 'linkedin_url': u} for n, h, u in zip(titles, clean_headline, url_link)]
+    print("persona",persona)
+    person_name,headline,person_url=get_persona(persona)
+    
+    data_list=[{'name': n1, 'position': h1, 'linkedin_url': u1} for n1, h1, u1 in zip(person_name, headline, person_url)]
+
+    results_persona = []
+    
+    
+    time.sleep(5)
+
+    people_u = people_url+'/?keywords=ceo'
+    print("People_url",people_u)
+    driver.get(people_u)
+
+    time.sleep(2)
+    
+    try:
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'org-people-profile-card__profile-title')))
+    except:
+        print(f"Failed to load page for title: {people_u}")
+    
+    SCROLL_PAUSE_TIME = 4
+    last_height = driver.execute_script("return document.body.scrollHeight")
+
+    while True:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(SCROLL_PAUSE_TIME)
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+
+    i = 0
+    linked_url = []
+    while True:
+        lnks = driver.find_elements(By.ID, f"org-people-profile-card__profile-image-{i}")
+        if not lnks:
+            break
+        for lnk in lnks:
+            linked_url.append(lnk.get_attribute('href'))
+        i += 1
+
+    titles_list = []
+    try:
+        title_elements = driver.find_elements(By.CLASS_NAME, 'lt-line-clamp--single-line')
+        for tit in title_elements:
+            titles_list.append(tit.text)
+    except:
+        titles_list = []
+    
+    headline = []
+    try:
+        head_elements = driver.find_elements(By.CLASS_NAME, 'lt-line-clamp--multi-line')
+        for i, hea in enumerate(head_elements):
+            if i % 2 == 0:
+                headline.append(hea.text)
+        clean_headline = clean_list(headline)
+    except:
+        clean_headline = []
+    
+    url_link = clean_list(linked_url)
+
+    persona = [{'name': n, 'position': h, 'linkedin_url': u} for n, h, u in zip(titles_list, clean_headline, url_link)]
+    
+    for person in persona:
+        results_persona.append({
+            'name': person['name'],
+            'position': person['position'],
+            'linkedin_url': person['linkedin_url']
+        })
+
+    total_list=data_list+results_persona
+
+    # Remove duplicates by using a set to track unique entries
+    unique_entries = {frozenset(item.items()): item for item in total_list}.values()
+
+# Convert back to a list
+    final_list = list(unique_entries)
+    
+    categories,sub_domains=sub_details(company_name,clean_details['industry'],about)
+
+    annual_revenue = annual_revenue_article(company_name)
+
+    total_name,total_poition,total_url=extract_persona(final_list)
+    
+    data = {
+        'Company_name': company_name,
+        'about': about,
+        'categories':categories,
+        'sub_domains':sub_domains,
+        'website': clean_details['website'],
+        'industry': clean_details['industry'],
+        'employee_size': clean_details['employee_size'],
+        'annual_revenue':annual_revenue,
+        'location': clean_details['location'],
+        'founded': clean_details['founded'],
+        'additional_info': clean_details['additional_info'],
+        'people_name': total_name,
+        'headline':total_poition,
+        'linked_url': total_url
+    }
+    
+    driver.quit()
+    return data
+
+
+def get_company_name_industry(domain): 
+    queries = [
+        f'site:.com OR site:.org OR site:.net "{domain} Companies in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales" OR loc:"India") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")'
+        #f'site:.com OR site:.org OR site:.net "Top {domain} Companies in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net "Leading {domain} Companies in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net "{domain} Industry in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net "{domain} Sector in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net "Major {domain} Companies in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net "Best {domain} Companies in India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net source:"{domain}Companiesinindia" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")',
+        # f'site:.com OR site:.org OR site:.net intitle:"{domain} Industry Companies" loc:"India" AND ("store" OR "shop" OR "outlet" OR "consumer products" OR "sales") -("technology" OR "automobile" OR "telecom" OR "pharmaceutical" OR "Financial" OR "Manufacturer")'
+    ]
+    all_links=[]
+    for query in queries:
+        results = search.results(query)
+        links = [entry['link'] for entry in results['organic']]
+        all_links.extend(links)
+    print(len(all_links))
+    company_names=[]
+    try:
+        for link in all_links[:1]:
+            content = scrape_content(link)
+            if content:
+                cleaned_text = clean_text(content)
+                chunks = split_text_into_chunks(cleaned_text, 1000)
+                for chunk in chunks:
+                    names = extract_company_names(chunk)
+                    try:
+                        args = json.loads(names.tool_calls[0].function.arguments)
+                        company_names.append(args)
+                    except (json.JSONDecodeError, KeyError) as e:
+                        print(f"Error parsing JSON or accessing keys: {e}")
+    except Exception as e:
+        print("Error parsing JSON")
+    linked=[]
+
+    try:
+        result_company=[name['list_of_company_names'] for name in company_names]
+        validated_names=validate_company_names(result_company)
+        extracted_names=clean_extracted_name(validated_names)
+        linked=LinkedinSearch(extracted_names)
+        linked_updated = [url.replace('in.linkedin.com', 'www.linkedin.com') for url in linked]
+    except Exception as e:
+        print("Errror occurred")
+        linked_updated=[]
+
+    return extracted_names,linked_updated
+
+
+@app.context_processor
+def utility_processor():
+    return dict(enumerate=enumerate)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    industry = request.form['industry']
+    csv_file = 'retail.csv'  
+    data = read_csv(csv_file)
+    return render_template('index.html', companies=data)
+
+def read_csv(file_path):
+    df = pd.read_csv(file_path)
+    return df.to_dict(orient='records')
+
+@app.route('/company/<int:index>/<industry>')
+def company_detail(index, industry):
+    csv_file='retail.csv'
+    data = read_csv(csv_file)
+    company = data[index]
+    
+    # Printing company name
+    print("Company_name", company['headline'])
+    
+    # Removing unwanted characters and splitting strings
+    name = company['people_name'].strip("[]").replace("'", "").split(',')
+    headline = company['headline'].strip("[]").replace("'", "").split(',')
+    linkedin = company['linked_url'].strip("[]").replace("'", "").split(',')
+    
+    # Stripping any leading or trailing whitespaces
+    name = [n.strip() for n in name]
+    headline = [h.strip() for h in headline]
+    linkedin = [l.strip() for l in linkedin]
+    
+    # Storing in the workers field
+    company['workers'] = [{'name': n, 'headline': h, 'linkedin_url': u} for n, h, u in zip(name, headline, linkedin)]
+    
+    print(company)
+    return render_template('company_detail.html', company=company, industry=industry)
+
+@app.route('/gen_main')
+def gen_main():
+    return render_template('gen_main.html')
+
+@app.route('/company_gen')
+def company_gen():
+    return render_template('company_gen.html')
+company_session=[]
+existing_names = []
+existing_linkedin = []
+@app.route('/company_name/submit', methods=['POST'])
+def handle_submit():
+    csv_file='retail.csv'
+    df=pd.read_csv(csv_file)
+
+    selected_industry = request.form.get('gen_radio')
+    company_name,linkedin_url=get_company_name_industry(selected_industry)
+    for name, link in zip(company_name, linkedin_url):
+        if name in df['Company_name'].values:
+            existing_names.append(name)
+            existing_linkedin.append(link)
+    
+    unique_names = [name for name in company_name if name not in existing_names]
+    unique_linkedin = [link for link in linkedin_url if link not in existing_linkedin]
+    print(company_name)
+    print(linkedin_url)
+    companies = [{'name': c, 'linkedin_url': l} for c,l in zip(unique_names, unique_linkedin)]
+    company_session.append(companies)
+    return render_template('company_gen.html', companies=companies)
+
+@app.route('/submit_selection', methods=['POST'])
+def submit_selection():
+    selected_companies = request.form.getlist('selected_companies')
+    print(selected_companies)
+    result_company=[]
+    for select in selected_companies:
+        splited_company=select.split('|')
+        result_company.append(splited_company[1])
+    company=[]
+    for i in result_company:
+        try:
+            data = extract_details(i)
+            company.append(data)    
+        except Exception as e:
+            print("Error")
+    return render_template('gen_main.html', selected_companies=company)
+
+
+@app.route('/submit_all', methods=['POST'])
+def submit_all():
+    company=[]
+    print("company_sesion",company_session)
+    selected_companies = company_session[0]
+    print("Selected Company Details",selected_companies)
+    for lin in selected_companies:
+        try:
+            data = extract_details(lin['linkedin_url'])
+            company.append(data)    
+        except Exception as e:
+            print("Error")
+    return render_template('gen_main.html',selected_companies=company)
+
+@app.route('/duplicate')
+def duplicate():
+    try:
+        companies = [{'name': c, 'linkedin_url': l} for c,l in zip(existing_names, existing_linkedin)]
+    except Exception as e:
+        print("No Duplicates")
+    return render_template('duplicate.html',companies=companies)
+
+@app.route('/Duplicate_extraction', methods=['POST'])
+def duplicate_extraction():
+    selected_companies = request.form.getlist('Duplicate_company')
+    result_company = []
+    for select in selected_companies:
+        splited_company = select.split('|')
+        result_company.append(splited_company[1])
+    
+    company = []
+    for i in result_company:
+        try:
+            data = extract_details(i)
+            company.append(data)  
+            print("company",company)  
+        except Exception as e:
+            print("Error", e)
+    df_new = pd.DataFrame(company)
+    df_existing = pd.read_csv('retail.csv')  # Or load it from wherever you have it stored
+    if set(df_new.columns) != set(df_existing.columns):
+        raise ValueError("The columns of the new data do not match the existing data")
+    df_existing.set_index('Company_name', inplace=True)
+    df_new.set_index('Company_name', inplace=True)
+
+    df_existing.update(df_new)
+
+    df_combined = df_existing.combine_first(df_new)
+
+    df_combined.reset_index(inplace=True)
+
+    df_combined.to_csv('retail.csv', index=False)
+
+    return render_template('index.html')
+
+
+@app.route('/update', methods=['POST'])
+def update():
+    selected_industry = request.form.getlist('selected_companies_details')
+    print("selected Company", selected_industry)
+    
+    for select in selected_industry:
+        splited_company = select.split('#')
+        print("splited", splited_company)
+        
+        company_data = {
+            'Company_name': splited_company[0],
+            'about': splited_company[1],
+            'categories':splited_company[2],
+            'sub_domains': splited_company[3],
+            'website': splited_company[4],
+            'industry': splited_company[5],
+            'employee_size': splited_company[6],
+            'annual_revenue': splited_company[7],
+            'location': splited_company[8],
+            'founded': splited_company[9],
+            'additional_info':splited_company[10],
+            'people_name': splited_company[11],
+            'headline': splited_company[12],
+            'linked_url':  splited_company[13],
+            'email':[''],
+            'contact_number':['']
+        }
+        
+        df = pd.DataFrame([company_data])
+        
+        df.to_csv('retail.csv', mode='a', index=False, header=False)
+
+    print("Data appended successfully.")
+    return render_template('index.html')
+
+
+def wrap_text(data):
+    if pd.isna(data):
+        return ''
+    
+    try:
+        if isinstance(data, str):
+            data = data.replace('"', '\\"').replace("'", '"')
+            items = json.loads(data)
+            if isinstance(items, list):
+                return '\n'.join(items)
+        return data 
+    except (json.JSONDecodeError, TypeError):
+        print(f"Error processing categories data: {data}")
+        return data  
+
+@app.route('/download')
+def download():
+    df = pd.read_csv('retail.csv')
+
+    required_columns = ['Company_name', 'categories', 'sub_domains', 'website', 'industry', 'employee_size', 'annual_revenue', 'location', 'people_name', 'headline', 'linked_url', 'email', 'contact_number']
+
+    if not all(column in df.columns for column in required_columns):
+        raise ValueError(f"One or more required columns are missing from the CSV. Required columns are: {required_columns}")
+
+    with open('output1.csv', mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+    
+        writer.writerow(['Company_name', 'categories', 'sub_domains', 'website', 'industry', 'employee_size', 'annual_revenue', 'location', 'people_name', 'headline', 'linked_url', 'email', 'contact_number'])
+
+        for index, row in df.iterrows():
+            # Company Name
+            company_name = str(row['Company_name']).strip()
+            # Categories
+            categories = row['categories']
+            formatted_categories = wrap_text(categories).strip()
+            # Sub-domain
+            sub_domain = row['sub_domains']
+            formatted_sub_domain = wrap_text(sub_domain).strip()
+            # Website
+            website = str(row['website']).strip()
+            # Industry
+            industry = str(row['industry']).strip()
+            # Employee size
+            employee_size = str(row['employee_size']).strip()
+            # Annual revenue
+            annual_revenue = str(row['annual_revenue']).strip()
+            # Location
+            location = str(row['location']).strip()
+            # People name
+            people_list = str(row['people_name'])
+            try:
+                people_splited = json.loads(people_list.replace("'", '"'))
+            except json.JSONDecodeError:
+                people_splited = people_list.split(',')
+            print("peple_name", people_splited)
+            # Headline
+            clean_headline = str(row['headline'])
+            try:
+                headline_splited = json.loads(clean_headline.replace("'", '"'))
+            except json.JSONDecodeError:
+                headline_splited = clean_headline.split(',')
+            print("headline", headline_splited)
+            # LinkedIn URL
+            linkedin_ids_list = str(row['linked_url'])
+            try:
+                splited_link = json.loads(linkedin_ids_list.replace("'", '"'))
+            except json.JSONDecodeError:
+                splited_link = linkedin_ids_list.split(',')
+            if not splited_link:
+                splited_link = [''] * len(people_splited)
+            print("linkedin_urls", splited_link)
+            # Email
+            email_list = str(row['email']).strip() if pd.notna(row['email']) else ''
+            try:
+                email_splited = json.loads(email_list.replace("'", '"'))
+            except json.JSONDecodeError:
+                email_splited = email_list.split(',')
+            if not email_splited:
+                email_splited = [''] * len(people_splited)
+            print("emails", email_splited)
+            # Contact number
+            contact_number_list = str(row['contact_number']).strip() if pd.notna(row['contact_number']) else ''
+            try:
+                contact_number_splited = json.loads(contact_number_list.replace("'", '"'))
+            except json.JSONDecodeError:
+                contact_number_splited = contact_number_list.split(',')
+            if not contact_number_splited:
+                contact_number_splited = [''] * len(people_splited)
+            print("contact_numbers", contact_number_splited)
+
+            if len(headline_splited) < len(people_splited):
+                headline_splited.extend(['NaN'] * (len(people_splited) - len(headline_splited)))
+
+            # Filling NaN values for LinkedIn URL based on the people_name count
+            if len(splited_link) < len(people_splited):
+                splited_link.extend(['NaN'] * (len(people_splited) - len(splited_link)))
+
+            for person, headline, linkedin_id in zip(people_splited, headline_splited, splited_link):
+                writer.writerow([
+                    company_name, 
+                    formatted_categories, 
+                    formatted_sub_domain, 
+                    website, 
+                    industry, 
+                    employee_size, 
+                    annual_revenue, 
+                    location, 
+                    person.strip(), 
+                    headline.strip(), 
+                    linkedin_id.strip(), 
+                    email_splited, 
+                    contact_number_splited
+                ])
+
+    return send_file('output1.csv', as_attachment=True)
+    
+if __name__ == '__main__':
+    app.run(port=8000)

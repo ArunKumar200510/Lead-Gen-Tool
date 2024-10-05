@@ -204,11 +204,11 @@ Our application utilizes the following technologies:
 <table>
   <tr>
     <td align="center" width="200">
-      <img src="https://github.com/microsoft/phi-2/raw/main/media/logo.png" alt="phi-2" width="50" height="50"/><br />
+      <img src="![image](https://github.com/user-attachments/assets/4eac06e0-48b4-449e-8baa-c150ee430a18)" alt="phi-2" width="50" height="50"/><br />
       <b>phi-2 model</b>
     </td>
     <td align="center" width="200">
-      <img src="https://raw.githubusercontent.com/hwchase17/langchain/main/docs/logo.png" alt="Langchain" width="50" height="50"/><br />
+      <img src="![image](https://github.com/user-attachments/assets/0ce3ae6a-229d-461d-b7f7-59b7540e975e)" alt="Langchain" width="50" height="50"/><br />
       <b>Langchain</b>
     </td>
     <td align="center" width="200">

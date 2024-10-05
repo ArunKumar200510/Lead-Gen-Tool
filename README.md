@@ -76,7 +76,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 ----
 
 
-### Tech Stack :
+### Tech Tools :
 
 ![image](https://github.com/user-attachments/assets/567a8d3c-20a4-46d6-b735-abe9720faee4)
 

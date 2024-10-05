@@ -2,6 +2,9 @@ from flask import Flask, render_template, request , send_file
 import os
 import requests
 from bs4 import BeautifulSoup
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import intel_extension_for_pytorch as ipex
 from langchain_community.utilities import GoogleSerperAPIWrapper
 from selenium import webdriver
 import time
@@ -17,9 +20,6 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import csv
 from csv import DictWriter
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import intel_extension_for_pytorch as ipex
 
 os.environ["MODIN_ENGINE"] = "dask"  
 
@@ -726,6 +726,7 @@ def get_company_name_industry(domain):
 def utility_processor():
     return dict(enumerate=enumerate)
 
+#Main page
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -741,6 +742,7 @@ def read_csv(file_path):
     df = pd.read_csv(file_path)
     return df.to_dict(orient='records')
 
+#Extract and display details
 @app.route('/company/<int:index>/<industry>')
 def company_detail(index, industry):
     csv_file='retail.csv'
@@ -796,6 +798,7 @@ def handle_submit():
     company_session.append(companies)
     return render_template('company_gen.html', companies=companies)
 
+#Handle on submitting the selection
 @app.route('/submit_selection', methods=['POST'])
 def submit_selection():
     selected_companies = request.form.getlist('selected_companies')
@@ -909,7 +912,6 @@ def update():
 def wrap_text(data):
     if pd.isna(data):
         return ''
-    
     try:
         if isinstance(data, str):
             data = data.replace('"', '\\"').replace("'", '"')
@@ -948,27 +950,27 @@ def download():
             website = str(row['website']).strip()
             # Industry
             industry = str(row['industry']).strip()
-            # Employee size
+            # Employee size extraction
             employee_size = str(row['employee_size']).strip()
-            # Annual revenue
+            # Annual revenue extraction
             annual_revenue = str(row['annual_revenue']).strip()
-            # Location
+            # Location extraction
             location = str(row['location']).strip()
-            # People name
+            # People name extraction
             people_list = str(row['people_name'])
             try:
                 people_splited = json.loads(people_list.replace("'", '"'))
             except json.JSONDecodeError:
                 people_splited = people_list.split(',')
             print("peple_name", people_splited)
-            # Headline
+            # Headline extraction
             clean_headline = str(row['headline'])
             try:
                 headline_splited = json.loads(clean_headline.replace("'", '"'))
             except json.JSONDecodeError:
                 headline_splited = clean_headline.split(',')
             print("headline", headline_splited)
-            # LinkedIn URL
+            # LinkedIn URL extraction
             linkedin_ids_list = str(row['linked_url'])
             try:
                 splited_link = json.loads(linkedin_ids_list.replace("'", '"'))
@@ -977,7 +979,7 @@ def download():
             if not splited_link:
                 splited_link = [''] * len(people_splited)
             print("linkedin_urls", splited_link)
-            # Email
+            # Email extraction
             email_list = str(row['email']).strip() if pd.notna(row['email']) else ''
             try:
                 email_splited = json.loads(email_list.replace("'", '"'))
@@ -986,7 +988,7 @@ def download():
             if not email_splited:
                 email_splited = [''] * len(people_splited)
             print("emails", email_splited)
-            # Contact number
+            # Contact number Extraction
             contact_number_list = str(row['contact_number']).strip() if pd.notna(row['contact_number']) else ''
             try:
                 contact_number_splited = json.loads(contact_number_list.replace("'", '"'))

@@ -261,6 +261,10 @@ Trent Ltd, "Grocery, Food & Beverages, Fashion, Beauty & Personal Care, Home & K
 
 ✅ **Fostered Collaboration**: The development of such an application likely involved collaboration with a team comprising experts from diverse fields, including deep learning and data analysis. This experience likely emphasized the significance of collaborative efforts in attaining shared objectives.
 
+# Resource 
+
+* PPT :* https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHDJ2psA/edit?utm_content=DAGSmf3iKbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ## *Unlock the Power of Smart Marketing Today* 🔑
 
 *Lead Gen Tool* is the all-in-one platform to take your marketing efforts to the next level, powered by AI and tailored to deliver results. Say goodbye to outdated marketing methods and embrace the future with smarter, data-driven tools that ensure every outreach effort hits the mark.

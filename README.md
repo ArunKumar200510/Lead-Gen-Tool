@@ -166,23 +166,68 @@ model.save_pretrained("ov_model")
 
 Our application utilizes the following technologies:
 
-- *Frontend*:
-  - HTML
-  - CSS
-  - JavaScript
+# Tech Stack
 
-- *Backend*:
-  - Flask
-  - Python
+## Frontend
+<table>
+  <tr>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" width="50" height="50"/><br />
+      <b>HTML</b>
+    </td>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" width="50" height="50"/><br />
+      <b>CSS</b>
+    </td>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/><br />
+      <b>JavaScript</b>
+    </td>
+  </tr>
+</table>
 
-- *AI & Machine Learning*:
-  - phi-2 model
-  - Langchain
-  - LLMs
-  - Intel One API
+## Backend
+<table>
+  <tr>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg" alt="Flask" width="50" height="50"/><br />
+      <b>Flask</b>
+    </td>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="50" height="50"/><br />
+      <b>Python</b>
+    </td>
+  </tr>
+</table>
 
-- *Web Automation & Testing*:
-  - Selenium
+## AI & Machine Learning
+<table>
+  <tr>
+    <td align="center" width="200">
+      <img src="https://github.com/microsoft/phi-2/raw/main/media/logo.png" alt="phi-2" width="50" height="50"/><br />
+      <b>phi-2 model</b>
+    </td>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/hwchase17/langchain/main/docs/logo.png" alt="Langchain" width="50" height="50"/><br />
+      <b>Langchain</b>
+    </td>
+    <td align="center" width="200">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Intel_OneAPI_logo.svg/1200px-Intel_OneAPI_logo.svg.png" alt="Intel OneAPI" width="50" height="50"/><br />
+      <b>Intel One API</b>
+    </td>
+  </tr>
+</table>
+
+## Web Automation & Testing
+<table>
+  <tr>
+    <td align="center" width="200">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg" alt="Selenium" width="50" height="50"/><br />
+      <b>Selenium</b>
+    </td>
+  </tr>
+</table>
+
 
 # What we learned ![image](https://user-images.githubusercontent.com/72274851/218499685-e8d445fc-e35e-4ab5-abc1-c32462592603.png)
 

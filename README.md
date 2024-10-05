@@ -263,9 +263,15 @@ Our application utilizes the following technologies:
 
 # Resource 
 
-You can view the presentation:
+# 🚀 You can view the presentation:
 
 Please go to PPT 🎉 https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHDJ2psA/edit?utm_content=DAGSmf3iKbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton for more details
+
+# 🚀 Intel DevMesh Project
+
+Check out our project on Intel DevMesh! 🌐🔗
+
+[🛠️ **View the Intel DevMesh Project Here**](https://devmesh.intel.com/projects/lead-gen-tool) 
 
 ----
 

@@ -242,13 +242,9 @@ Our application utilizes the following technologies:
 
 ![Screenshot 2024-09-13 213859](https://github.com/user-attachments/assets/75b6fae2-a1b9-4500-a00c-8523f92f47d9)
 
-### Here is a sample data of company information in CSV format.
+### Here is a sample data of company information.
 
-```csv
-Company_name,categories,sub_domains,website,industry,employee_size,annual_revenue,location,people_name,headline,linked_url,email,contact_number,date
-Trent Ltd, "Grocery, Food & Beverages, Fashion, Beauty & Personal Care, Home & Kitchen", "Consumer Packaged Goods (CPG), Fast Moving Consumer Goods (FMCG), Omnichannel, Supermarkets, D2C Brands, Brand Aggregators",http://trentlimited.com/,Retail,5,001-10,000 employees,3298 crore, Mumbai, Maharashtra, Sreelekshmi Madhu, "COO's Office - Trent Ltd. | Ex-Consultant @ Cognizant Consulting | IIM Rohtak",https://www.linkedin.com/in/sreelekshmi-madhu?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABSYdMgB0bDyh7Yfwj5B1Ex83EwmkstnR2g,,,"20-08-2024"
-Trent Ltd, "Grocery, Food & Beverages, Fashion, Beauty & Personal Care, Home & Kitchen", "Consumer Packaged Goods (CPG), Fast Moving Consumer Goods (FMCG), Omnichannel, Supermarkets, D2C Brands, Brand Aggregators",http://trentlimited.com/,Retail,5,001-10,000 employees,3298 crore, Mumbai, Maharashtra, Raju Bhagat, "Unit head @ ZUDIO TATA ENTERPRISE",https://www.linkedin.com/in/raju-bhagat-38a88b239?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADtlhFoBx1A0v1VyvvtG9t7Z2JRHpjvzjE4,,,"20-08-2024"
-```
+![image](https://github.com/user-attachments/assets/eb6d3c26-8555-46b3-94f4-25cb297b564a)
 
 # What we learned ![image](https://user-images.githubusercontent.com/72274851/218499685-e8d445fc-e35e-4ab5-abc1-c32462592603.png)
 

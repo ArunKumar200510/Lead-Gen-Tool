@@ -3,7 +3,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from langchain_community.utilities import GoogleSerperAPIWrapper
-from openai import AzureOpenAI
 from selenium import webdriver
 import time
 import re

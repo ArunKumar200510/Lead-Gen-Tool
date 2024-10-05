@@ -70,6 +70,10 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 ### Intel® Toolkits:
 ![image](https://github.com/user-attachments/assets/8ff159b0-a560-40d5-9f10-792dd9cf9d35)
 
+#### Intel Toolkits used:
+
+![image](https://github.com/user-attachments/assets/1909c3a6-0e02-4f9b-9e5a-fb72cb4120da)
+
 **Model Optimization**:
 - **Intel® Extension for PyTorch**: This tool optimizes deep learning models built in PyTorch, enabling faster training and inference on Intel® hardware such as GPUs and TPUs.
 - **Intel® IPEX** (Intel® Extension for PyTorch): Specifically designed to optimize performance further for Intel architectures, enhancing both training and inference speed.

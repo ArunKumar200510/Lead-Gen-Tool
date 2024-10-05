@@ -26,6 +26,7 @@ os.environ["MODIN_ENGINE"] = "dask"
 
 os.environ["SERPER_API_KEY"] = "API_KEY"
 
+# Loading microsoft-phi-2 model
 model_name = "microsoft/phi-2"
 client = AutoModelForCausalLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)

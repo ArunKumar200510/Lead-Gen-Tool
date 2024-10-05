@@ -232,6 +232,17 @@ Our application utilizes the following technologies:
   </tr>
 </table>
 
+# Output 
+
+![image1](https://github.com/user-attachments/assets/f6cf4cfd-078e-4afe-9864-2924b1d3de34)
+
+![image2](https://github.com/user-attachments/assets/dc2679af-bccd-4ce0-a6f5-3223bc2328c9)
+
+![image3](https://github.com/user-attachments/assets/79d4872e-5233-4fea-87bc-948e2941081a)
+
+![Screenshot 2024-09-13 213859](https://github.com/user-attachments/assets/75b6fae2-a1b9-4500-a00c-8523f92f47d9)
+
+
 
 # What we learned ![image](https://user-images.githubusercontent.com/72274851/218499685-e8d445fc-e35e-4ab5-abc1-c32462592603.png)
 

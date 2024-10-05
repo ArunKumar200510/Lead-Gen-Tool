@@ -208,15 +208,15 @@ Our application utilizes the following technologies:
 <table>
   <tr>
     <td align="center" width="200">
-      <img src="https://raw.githubusercontent.com/microsoft/phi-2/main/media/phi-2.png" alt="phi-2" width="50" height="50"/><br />
+      <img src="https://github.com/logabaalan777/images/blob/main/assets/microsoft-phi2.jpeg" alt="phi-2" width="50" height="50"/><br />
       <b>phi-2 model</b>
     </td>
     <td align="center" width="200">
-      <img src="https://github.com/hwchase17/langchain/raw/master/docs/assets/logo.png" alt="Langchain" width="50" height="50"/><br />
+      <img src="https://github.com/logabaalan777/images/blob/main/assets/langchain.jpeg" alt="Langchain" width="50" height="50"/><br />
       <b>Langchain</b>
     </td>
     <td align="center" width="200">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Intel_OneAPI_logo.svg/512px-Intel_OneAPI_logo.svg.png" alt="Intel OneAPI" width="50" height="50"/><br />
+      <img src="https://github.com/logabaalan777/images/blob/main/assets/logo-oneapi.png" alt="Intel OneAPI" width="50" height="50"/><br />
       <b>Intel One API</b>
     </td>
   </tr>

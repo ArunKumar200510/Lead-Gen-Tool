@@ -125,6 +125,7 @@ df = pd.read_csv(file_path)
 **Install Intel’s Optimum and Neural Compressor**
 ```bash
 pip install optimum[openvino,nncf]
+pip install "optimum-intel[extras]"@git+https://github.com/huggingface/optimum-intel.git
 pip install neural-compressor[pt]
 ```
 

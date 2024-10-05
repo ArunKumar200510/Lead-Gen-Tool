@@ -92,7 +92,7 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 ### Intel ToolKits Usage Tutorial
 
-**Install PyTorch with Intel Optimization**
+**Install Intel's PyTorch for Optimization**
 ```bash
 conda install libuv
 python -m pip install torch==2.3.1+cxx11.abi torchvision==0.18.1+cxx11.abi torchaudio==2.3.1+cxx11.abi intel-extension-for-pytorch==2.3.110+xpu --extra-index-url https://pytorch-extension.intel.com/release-whl/stable/mtl/us/

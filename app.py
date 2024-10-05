@@ -6,6 +6,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import intel_extension_for_pytorch as ipex
 from langchain_community.utilities import GoogleSerperAPIWrapper
+from optimum.intel import OVModelForCausalLM
 from selenium import webdriver
 import time
 import re
@@ -29,7 +30,10 @@ model_name = "microsoft/phi-2"
 client = AutoModelForCausalLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-model = ipex.optimize(model_name, weights_prepack=False,max_len=200)
+model = ipex.optimize(model_name, weights_prepack=False,max_len=512)
+
+model_id = "microsoft/phi-2"
+model_opt = OVModelForCausalLM.from_pretrained(model_id, export=True)
 
 search = GoogleSerperAPIWrapper(gl='in')
 app = Flask(__name__)
@@ -419,7 +423,8 @@ def extract_persona(user_input):
     positions=[]
     linkedin_urls=[]
     try:
-        outputs = model.generate(**messages, max_length=200)
+        outputs = model.generate(**messages, max_length=512)
+        # outputs = model_opt.generate(**messages, max_length=512)
         response = tokenizer.batch_decode(outputs)[0]
         result = response.choices[0].message.content
         data_list = json.loads(result)

@@ -212,7 +212,7 @@ Our application utilizes the following technologies:
       <b>Langchain</b>
     </td>
     <td align="center" width="200">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Intel_OneAPI_logo.svg/1200px-Intel_OneAPI_logo.svg.png" alt="Intel OneAPI" width="50" height="50"/><br />
+      <img src="![image](https://github.com/user-attachments/assets/c4888dd2-0f23-4978-b72b-b0ac9ecf6c38)" alt="Intel OneAPI" width="50" height="50"/><br />
       <b>Intel One API</b>
     </td>
   </tr>

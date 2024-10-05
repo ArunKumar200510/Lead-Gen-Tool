@@ -212,7 +212,7 @@ Our application utilizes the following technologies:
       <b>phi-2 model</b>
     </td>
     <td align="center" width="200">
-      <img src="https://github.com/logabaalan777/images/blob/main/assets/langchain.jpeg" alt="Langchain" width="50" height="50"/><br />
+      <img src="https://github.com/logabaalan777/images/blob/main/assets/lg.png" alt="Langchain" width="50" height="50"/><br />
       <b>Langchain</b>
     </td>
     <td align="center" width="200">

@@ -105,8 +105,6 @@ Campaign management becomes effortless with Lead Gen Tool’s AI-driven features
 
 #### Intel® Distribution for Modin vs Pandas
 
-![diagram-moding-pandas-api](https://github.com/user-attachments/assets/c96cb1ed-3bdb-459e-8d8f-50406bd02262)
-
 ![WhatsApp Image 2024-10-05 at 01 37 20_db5e1ffd](https://github.com/user-attachments/assets/05074c02-8289-425e-a460-80429d34657d)
 
 **Intel® Modin vs. Pandas**: Visualizing a significant performance boost in data analysis using Intel® Modin, the image could display a bar graph comparing time taken to process large datasets using Modin versus Pandas.

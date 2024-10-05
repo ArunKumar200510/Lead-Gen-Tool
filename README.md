@@ -46,7 +46,7 @@ We are excited to share a full demo and detailed explanation of our project! �
 
 👉 **Watch the Full Demo on YouTube** : https://www.youtube.com/watch?v=oWlKLKmFNh0 👈
 
-https://github.com/user-attachments/assets/1f8619ba-6ee2-489f-b6e5-c558974261c4
+https://github.com/user-attachments/assets/79d87a5c-6cbb-4e9b-b8c5-29a90cb9efa0
 
 By blending the power of *AI* and *Large Language Models (LLMs), **Lead Gen Tool* solves these issues, offering businesses a comprehensive platform with the following key features:
 

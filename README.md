@@ -251,8 +251,7 @@ Our application utilizes the following technologies:
 
 You can view the presentation by clicking the link below:
 
-[View the Canva Presentation](https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHDJ2psA/edit?utm_content=DAGSmf3iKbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
+Please go to PPT 🎉 https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHDJ2psA/edit?utm_content=DAGSmf3iKbU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton for more details
 
 ----
 

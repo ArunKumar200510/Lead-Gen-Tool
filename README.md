@@ -271,7 +271,7 @@ Please go to PPT 🎉 https://www.canva.com/design/DAGSmf3iKbU/aKbvpV_XXANb6iHHD
 
 Check out our project on Intel DevMesh! 🌐🔗
 
-[🛠️ **View the Intel DevMesh Project Here**](https://devmesh.intel.com/projects/lead-gen-tool) 
+🛠️ **View the Intel DevMesh Project Here** https://devmesh.intel.com/projects/lead-gen-tool 
 
 ----
 
